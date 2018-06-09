@@ -77,9 +77,5 @@ namespace SportsDirect
              Assert.Pass("Done successfully");
 
         }
-            
-          
-
-
     }
 }
