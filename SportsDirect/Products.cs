@@ -140,7 +140,7 @@ namespace SportsDirect
         public void productChoice()
         {
             Thread.Sleep(2000);
-            IWebElement boots = browser.FindElement(By.CssSelector(".productimage a[href='/soviet-remix-mens-boots-114822?colcode=11482271']"));
+            IWebElement boots = browser.FindElement(By.CssSelector(".s-productthumbbox a[href='/soviet-remix-mens-boots-114822?colcode=11482271']"));
             boots.Click();
             Assert.Pass("Product chosen!");
 
@@ -151,11 +151,11 @@ namespace SportsDirect
         public void productPurchased()
         {
 
-            IWebElement colour = browser.FindElement(By.CssSelector(".colourImages a[href='DesktopModules/SportsDirect/ProductDetail/Controls/#']"));
+            IWebElement colour = browser.FindElement(By.CssSelector(".ColourImagesWrap a[href='DesktopModules/SportsDirect/ProductDetail/Controls/#']"));
             colour.Click();
             
             int shoeSize = 44;
-            IWebElement size = browser.FindElement(By.CssSelector(".sizeButtons li[title='Click to select 10 (44)'] a"));
+            IWebElement size = browser.FindElement(By.XPath("//*[@id='dnn_ctr82881732_ViewTemplate_ctl00_ctl13_rptSizes_ctl05_ancLink']"));
             string sizeNumber = size.Text.Replace("(", "").Replace(")", "").Replace("10", "").Trim();
             int broj = Int32.Parse(sizeNumber);
             if (broj == shoeSize)
