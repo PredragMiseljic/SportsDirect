@@ -9,8 +9,8 @@ namespace SportsDirect
     class Data
     {
         public string invalidEmail = "probayahu.com";
-        public string validEmail = "proba123456@protonmail.com";
-        public string password = "abc123++";
+        public string validEmail = "*********@protonmail.com";
+        public string password = "*********";
         public string invalidSearch = "5135351351";
         public string validSearch = "Mens";
     }
