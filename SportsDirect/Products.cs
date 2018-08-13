@@ -151,11 +151,11 @@ namespace SportsDirect
         public void productPurchased()
         {
 
-            IWebElement colour = browser.FindElement(By.CssSelector(".ColourImagesWrap a[href='DesktopModules/SportsDirect/ProductDetail/Controls/#']"));
+            IWebElement colour = browser.FindElement(By.CssSelector(".productVariantContainer a[href='DesktopModules/SportsDirect/ProductDetail/Controls/#']"));
             colour.Click();
             
             int shoeSize = 44;
-            IWebElement size = browser.FindElement(By.XPath("//*[@id='dnn_ctr82881732_ViewTemplate_ctl00_ctl13_rptSizes_ctl05_ancLink']"));
+            IWebElement size = browser.FindElement(By.XPath("//*[@id='dnn_ctr86565809_ViewTemplate_ctl00_ctl13_rptSizes_ctl05_ancLink']"));
             string sizeNumber = size.Text.Replace("(", "").Replace(")", "").Replace("10", "").Trim();
             int broj = Int32.Parse(sizeNumber);
             if (broj == shoeSize)
